@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./scripts/jquery-3.1.1.min.js"></script>
+    <script src="./scripts/bookstore.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/bookstore.css">
+</head>
+<body>
+<header id="menu" class="menu">
+    <a href="#" id="linkHome" class="menu-item">Home</a>
+    <a href="#" id="linkContact" class="menu-item">Contact</a>    
+    <a href="#" id="linkLogin" class="menu-item">Login</a>
+    <a href="#" id="linkRegister" class="menu-item">Register</a>
+    <a href="#" id="linkAll" class="menu-item">All books</a>
+    <a href="#" id="linkLogout" class="menu-item">Logout</a>  
+    <span id="loggedInUser" class="menu-item"></span>      
+</header>
+
+<main>
+    <div id="loadingBox" class="loadingBox notification">Loading ...</div>
+
+    <div id="errorBox" class="errorBox notification">Error</div>
+
+    <section id="viewHome">
+        <h1 class="title">Welcome</h1>
+        <p class="body-text">
+            At our bookstore, every type of reader can satisfy one-of-a-kind book cravings. Whether your personal passions lean toward new releases by the hottest authors or classics from the old masters, you will find it by us. We have the biggest bestsellers to the hardest-to-find, out-of-print rarities brought to you by thousands of Booksellers around the world.
+        </p>
+    </section>
+
+    <section id="viewContact">
+        <h3>Contacts:</h3>
+        <div>Bulgaria; Shumen; "Car Osvoboditel" 100</div>
+        <div>Telephone: 0888 888 888</div>
+        <div>Fax: 0888 999 999</div>
+    </section>
+
+    <section id="viewLogin">
+        <h1 class="title-form">Please Login</h1>
+        <form id="formLogin" class="form">
+            <div>Username:</div>
+            <input type="text" name='username'>
+            <div>Password:</div>
+            <input type="password" name='password' >
+            <br>
+            <input type="button" id="buttonLoginUser" value="Login">
+        </form>
+    </section>
+
+    <section id="viewRegister">
+        <h1 class="title-form">Please Register Here</h1>
+        <form id="formRegister" class="form">
+            <div>Username:</div>
+            <input type="text" name='username'>
+            <div>E-mail:</div>
+            <input type="text" name='email'>
+            <div>Password:</div>
+            <input type="password" name='password' >
+            <br>
+            <input type="button" id="buttonRegisterUser" value="Register">
+        </form>
+    </section>
+
+    <section id="viewAllBooks">
+        <h1 class="title-form">All Books</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>The Lord of the Rings</td>
+                <td>J.R.R. Tolkien</td>
+                <td>Mnogo qka kniga brat.</td>
+                <td>25$</td>
+            </tr>
+            <tr>
+                <td>Pod Igoto</td>
+                <td>Ivan Vazov</td>
+                <td>Biva</td>
+                <td>14$</td>
+            </tr>
+            <tr>
+                <td>It</td>
+                <td>Stephen King</td>
+                <td>Horror</td>
+                <td>18$</td>
+            </tr>            
+            <tr>
+                <td>Shogun</td>
+                <td>James Clavell</td>
+                <td>Nqkvi samurai se biqt.</td>
+                <td>20$</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="viewDetails">
+        <h1 id="detailsTitleName"></h1>
+        by <h2 id="detailsAuthorName"></h2>
+        <div id="detailsDescription"></div>
+        <div id="detailsPrice">Price: </div>
+        <input type="button" value="Buy">
+    </section>
+    <script>
+        startApp();
+    </script>
+</main>
+
+<footer>
+    Bookstore - Simple Single Page Application
+</footer>
+</body>
+</html>
